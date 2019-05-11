@@ -11,22 +11,24 @@
             <p>This view protects the Dashboard</p>
             <p>Use the following credentials to login</p>
             <p>Using open API - <a class="text-white" href="https://reqres.in/">https://reqres.in/</a></p>
-            <table class="uk-table uk-table-small uk-table-divider">
-              <thead>
-                <tr>
-                  <th>Email</th>
-                  <th>Password</th>
-                  <th>Use</th>
-                </tr>
-                </thead>
-              <tbody>
-                <tr>
-                  <td>eve.holt@reqres.in</td>
-                  <td>cityslicka</td>
-                  <td><button  class="uk-button uk-button-primary" (click)="useCredential()" >Set</button></td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="uk-overflow-auto">
+              <table class="uk-table uk-table-small uk-table-divider">
+                <thead>
+                  <tr>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>Use</th>
+                  </tr>
+                  </thead>
+                <tbody>
+                  <tr>
+                    <td>eve.holt@reqres.in</td>
+                    <td>cityslicka</td>
+                    <td><button  class="uk-button uk-button-primary" (click)="useCredential()" >Set</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>
@@ -50,7 +52,7 @@
             <!-- <mat-checkbox><small>I agree with the <i>terms and conditions</i></small></mat-checkbox> -->
             <label for="terms">
               <input class="uk-checkbox" type="checkbox" formControlName="terms"> 
-              <small> &nbsp; I agree with the <i>terms and conditions</i></small>
+              <small> &nbsp; I have read the <i>terms and conditions</i></small>
             </label>
             <br>
             <div class="uk-margin">
