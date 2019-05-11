@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-lg-6 col-md-6 col-sm-12 cover">
         <div class="logoArea">
-          <img src="../../assets/images/coffee icon.svg" alt="logo image" class="logo">
+          <img src="./assets/images/coffee icon.svg" alt="logo image" class="logo">
         </div>
         <div class="splashArea">
           <h5 src="" alt="splash Image" class="splash"> Acivate </h5>
@@ -12,8 +12,8 @@
             <p>Use the following credentials to login</p>
             <p>Using open API - <a class="text-white" href="https://reqres.in/">https://reqres.in/</a></p>
             <div class="uk-overflow-auto">
-              <table class="uk-table uk-table-small uk-table-divider">
-                <thead>
+              <table class="uk-table uk-table-middle uk-table-divider">
+                <thead class="uk-table-middle">
                   <tr>
                     <th>Email</th>
                     <th>Password</th>
@@ -24,15 +24,19 @@
                   <tr>
                     <td>eve.holt@reqres.in</td>
                     <td>cityslicka</td>
-                    <td><button  class="uk-button uk-button-primary" (click)="useCredential()" >Set</button></td>
+                    <td  class="uk-width-small"><button  class="uk-button uk-button-primary" (click)="useCredential()" >Set</button></td>
                   </tr>
                 </tbody>
               </table>
             </div>
+
+            <div class="pointer" (click)="scroll(login)">
+              <i class="fas fa-chevron-circle-down animated infinite bounce delay-2s" style="font-size: 4em;"></i>
+            </div>
           </div>
         </div>
       </div>
-      <div class="col-lg-6 col-md-6 col-sm-12 loginArea">
+      <div class="col-lg-6 col-md-6 col-sm-12 loginArea" #login>
         <div class="formArea">
           <h5>Sign In to View Dashboard</h5>
 

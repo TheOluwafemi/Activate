@@ -36,6 +36,14 @@
                 text-align: center;
                 transform: rotate(-8.1deg);
             }
+
+            .uk-table th {
+                text-align: center !important;
+            }
+
+            .pointer {
+                display: none;
+            }
         }
     }
 
@@ -127,6 +135,10 @@
                     font-size: 72px;
                     text-align: center;
                     transform: rotate(-8.1deg);
+                }
+
+                .pointer {
+                    display: block;
                 }
             }
         }

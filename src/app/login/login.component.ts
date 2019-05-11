@@ -3,7 +3,7 @@ import {ApiService} from './api.service';
 import {CustomerService} from './customer.service';
 import {Router} from '@angular/router';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-
+import { NgZone } from '@angular/core';
 
 @Component({
   selector: 'app-login',
@@ -13,8 +13,14 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class LoginComponent implements OnInit {
 
   signInForm: FormGroup;
+  public mobileView;
 
-  constructor(private api: ApiService, private customer: CustomerService, private router: Router) {
+  constructor(
+    private api: ApiService,
+    private customer: CustomerService,
+    private router: Router,
+    private zone: NgZone
+    ) {
   }
 
   ngOnInit() {
@@ -50,4 +56,7 @@ export class LoginComponent implements OnInit {
         });
   }
 
+  scroll(el: HTMLElement) {
+    el.scrollIntoView({behavior: 'smooth', block: 'end', inline: 'nearest'});
+  }
 }
