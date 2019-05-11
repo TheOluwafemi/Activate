@@ -1,0 +1,65 @@
+<div id="login">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-12 cover">
+        <div class="logoArea">
+          <img src="../../assets/images/coffee icon.svg" alt="logo image" class="logo">
+        </div>
+        <div class="splashArea">
+          <h5 src="" alt="splash Image" class="splash"> Acivate </h5>
+          <div class="text-center">
+            <p>This view protects the Dashboard</p>
+            <p>Use the following credentials to login</p>
+            <p>Using open API - <a class="text-white" href="https://reqres.in/">https://reqres.in/</a></p>
+            <table class="uk-table uk-table-small uk-table-divider">
+              <thead>
+                <tr>
+                  <th>Email</th>
+                  <th>Password</th>
+                  <th>Use</th>
+                </tr>
+                </thead>
+              <tbody>
+                <tr>
+                  <td>eve.holt@reqres.in</td>
+                  <td>cityslicka</td>
+                  <td><button  class="uk-button uk-button-primary" (click)="useCredential()" >Set</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12 loginArea">
+        <div class="formArea">
+          <h5>Sign In to View Dashboard</h5>
+
+          <form class="form" [formGroup] = signInForm (ngSubmit)="tryLogin()">
+            <div class="uk-margin">
+              <label for="email">Email</label>
+              <input class="uk-input" type="email" name="email" id="email" placeholder="Enter your email" required formControlName="email">
+              <small *ngIf="!signInForm.controls.email.valid  && signInForm.controls.email.touched" class="text-danger">Enter a valid email <sup>*</sup> </small>
+            </div>
+            <br>
+            <div class="uk-margin">
+              <label for="password">Password</label>
+              <input class="uk-input"  type="password" name="password"  id="password" placeholder="This will be our secret" required formControlName="password">
+              <small *ngIf="!signInForm.controls.password.valid  && signInForm.controls.password.touched" class="text-danger">Password must be more than 6 characters <sup>*</sup> </small>
+            </div>
+            <br>
+            <!-- <mat-checkbox><small>I agree with the <i>terms and conditions</i></small></mat-checkbox> -->
+            <label for="terms">
+              <input class="uk-checkbox" type="checkbox" formControlName="terms"> 
+              <small> &nbsp; I agree with the <i>terms and conditions</i></small>
+            </label>
+            <br>
+            <div class="uk-margin">
+              <button mat-button [disabled]='!signInForm.valid'>Sign In</button>  
+            </div>
+          </form>
+        </div>
+        <small class="credit">visual design by <a href="https://twitter.com/creativegodd" target="_blank">Creativegodd</a> </small>
+      </div>
+    </div>
+  </div>
+</div>

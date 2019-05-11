@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Sacramento');
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+
+#login {
+    height: 100%;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+
+    .cover {
+        height: 100vh;
+        width: 100%;
+        background: #DC524F;
+        position: relative;
+
+        .logoArea {
+            padding: 2em;
+
+            .logo {
+
+            }
+        }
+
+        .splashArea {
+            width: 80%;
+            margin-right: 10%;
+            margin-left: 10%;
+            position: relative;
+            top: 15%;
+            color: white;
+
+            .splash {
+                color: white;
+                font-family: 'Sacramento', cursive;
+                font-size: 72px;
+                text-align: center;
+                transform: rotate(-8.1deg);
+            }
+        }
+    }
+
+    .loginArea {
+        height: 100vh;
+        width: 100%;
+        background: #312844;
+        position: relative;
+        color: white;
+
+        .credit {
+            position: absolute;
+            bottom: 2em;
+            float: right;
+        }
+
+        .formArea {
+            width: 80%;
+            margin-right: 10%;
+            margin-left: 10%;
+            position: relative;
+            top: 25%;
+            color: white;
+
+            h5 {
+                color: white;
+                font-size: 30px;
+                line-height: 35px;
+                color: rgba(243, 243, 243, 0.5);
+                margin-top: 1em;      
+                margin-bottom: 2em;          
+            }
+
+            form {
+
+                label {
+                    text-transform: uppercase;
+                    font-size: 15px;
+                    line-height: 18px;
+                    color: rgba(243, 243, 243, 0.8);
+                }
+
+                input {
+
+                }
+
+                button {
+                    background: #DC524F;
+                    text-transform: uppercase;
+
+                }
+
+            }
+        }
+    }
+}
