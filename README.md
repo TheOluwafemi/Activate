@@ -4,6 +4,10 @@ Activate implements guards, authentication, services and working with REST APIs 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.4.
 
+## Run on local machine
+
+Clone this repository and unzip to your projects folder. Open with your favorite code editor, then open terminal and run `npm install` to install all the dependencies.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
